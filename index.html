@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="static/favicon.ico">
     <title>Seu MVP</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.2/venobox.css" async defer>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" async defer>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" async defer>
-    <link rel="stylesheet" href="css/style.css" async defer>
-    <link rel="stylesheet" href="css/contact.css" async defer>
+    <link rel="stylesheet" href="static/css/style.css" async defer>
+    <link rel="stylesheet" href="static/css/contact.css" async defer>
 </head>
 
 <body>
@@ -46,7 +46,7 @@
     <div id=" navbar-top">
         <nav class="navbar navbar-expand-md navbar-light bg-white fixed">
             <div class="container">
-                <a class="navbar-brand nav-external" href="#home"><img src="img/cover/logo.png" width="100px"></a>
+                <a class="navbar-brand nav-external" href="#home"><img src="static/img/cover/logo.png" width="100px"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -74,7 +74,7 @@
 
             <div class="content text-center">
                 <div class="heading">
-                    <img src="img/logo-simples.png" alt="" class="anime">
+                    <img src="static/img/logo-simples.png" alt="" class="anime">
                     <h2 class="mt-0 mb-4">Confira nossos <span class="themecolor" style="border-bottom:6px solid #6de0f6;">serviços</span></h2>
 
                     <p class="mt-4 mb-0">Oferecemos o que há de melhor em produtos digitais para novas Startups</p>
@@ -86,7 +86,7 @@
                         <p>Hoje em dia é essencial ter uma presença digital. Por isso, as empresas precisam estar presentes nas redes sociais e também ter um site. E com o avanço da tecnológico, estes sites têm tornando cada vez mais atraentes e modernos. Basicamente uma OnePage, leva informações como "sobre", "Ask", "Contatos", "equipe" e/ou "serviços", para responder qualquer duvidas dos seus futuros clientes.</p>
                     </div>
                     <div class="ai-icon" style="margin-top:50px;">
-                        <img src="img/steam.png" width="350px">
+                        <img src="static/img/steam.png" width="350px">
                     </div>
                 </div>
                 <div>
@@ -144,7 +144,7 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-12 teammate animated hiding" data-animation="fadeInLeft" data-delay="600">
                         <div class="profile-photo">
-                            <img class="img-fluid" src="img/team/1.jpg" alt="">
+                            <img class="img-fluid" src="static/img/team/1.jpg" alt="">
                         </div>
                         <div class="bio mt-4">
                             <h5 class="mb-1">Andreia Costa</h5>
@@ -169,7 +169,7 @@
 
                     <div class="col-md-3 col-sm-6 col-xs-12 teammate animated hiding" data-animation="fadeInUp" data-delay="300">
                         <div class="profile-photo">
-                            <img class="img-fluid" src="img/team/3.jpg" alt="">
+                            <img class="img-fluid" src="static/img/team/3.jpg" alt="">
                         </div>
                         <div class="bio mt-4">
                             <h5 class="mb-1">Ítalo Carvalho</h5>
@@ -199,7 +199,7 @@
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12 teammate animated hiding" data-animation="fadeInRight" data-delay="600">
                         <div class="profile-photo">
-                            <img class="img-fluid" src="img/team/4.jpg" alt="">
+                            <img class="img-fluid" src="static/img/team/4.jpg" alt="">
                         </div>
                         <div class="bio mt-4">
                             <h5 class="mb-1">Plinio Mikael</h5>
@@ -241,23 +241,22 @@
           
             ----------------->
 
-            <form class="form-horizontal" role="form" method="post" action="contact.php">
-
+            <form class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
                 <ul class="form-style-1">
-                    <li><input type="text" name="field1" class="field-divided" placeholder="Nome" /> <input type="text" name="field2" class="field-divided" placeholder="Email" /></li>
+                    <li><input type="text" name="field1" class="field-divided" placeholder="Nome" id="id_name" /> <input type="text" name="field2" class="field-divided" placeholder="Email" id="id_email" /></li>
                     <li>
-                        <input type="email" name="field3" class="field-long" placeholder="Whatsapp" />
+                        <input type="number" name="field3" class="field-long" placeholder="Whatsapp" id="id_whatsapp" />
                     </li>
 
                     <li>
-                        <textarea name="field5" id="field5" placeholder="Mensagem" class="field-long field-textarea"></textarea>
+                        <textarea name="field5" id="id_description" placeholder="Mensagem" class="field-long field-textarea"></textarea>
                     </li>
                     <li>
                         <div class="form-group">
                             <span style="color:white;">Mande o arquivo de seu projeto antigo.<span style="color: #6de0f6;">(opcional*)</span></span>
                             <div class="custom-file">
-                                <input type="file" name="files[]" multiple class="custom-file-input form-control" id="customFile">
-                                <label class="custom-file-label" for="customFile">Escolha um arquivo</label>
+                                <input type="file" name="files[]" multiple="multiple" class="custom-file-input form-control" id="id_file">
+                                <label class="custom-file-label" for="id_file">Escolha um arquivo</label>
                             </div>
                         </div>
                     </li>
@@ -306,7 +305,7 @@
                 <div class="col-sm-12 animated hiding" data-animation="fadeInUp">
                     <ul class="social list-inline">
                         <li class="list-inline-item">
-                            <img src="img/logo-de-lado.png" width="150px">
+                            <img src="static/img/logo-de-lado.png" width="150px">
                             </a>
                         </li>
                     </ul>
@@ -326,7 +325,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.2/venobox.min.js"></script>
-    <script src="js/script.js?v=1.0"></script>
+    <script src="static/js/script.js?v=1.0"></script>
     <!-- Google Analytics: change xxxxxxxxxx to be your site's ID.
     <script>
         (function (b, o, i, l, e, r) {
