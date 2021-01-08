@@ -44,14 +44,6 @@ function initPortfolio() {
     var $items = $portfolio.find(".items");
     var $filters = $portfolio.find(".filters li a");
 
-    $items.imagesLoaded(function() {
-
-        $items.isotope({
-            itemSelector: ".item",
-            layoutMode: "fitRows",
-            transitionDuration: "0.7s"
-        });
-    });
 
     $filters.click(function() {
 
@@ -125,13 +117,7 @@ $(document).ready(function() {
     initAnimations();
 });
 
-$(window).on("load", function() {
 
-    var $loader = $(".loader");
-
-    $loader.find(".loading").fadeOut();
-    $loader.fadeOut("slow");
-});
 
 
 $(document).ready(function() {
